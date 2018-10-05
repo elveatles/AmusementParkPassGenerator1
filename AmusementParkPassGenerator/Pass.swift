@@ -56,4 +56,39 @@ class Pass {
     func swipe(discountType: DiscountType) -> Float {
         return 0.0
     }
+    
+    /**
+     Get the message for the swipe result.
+     
+     - Parameter success: true if the swip was successful.
+     - Returns: The message for the swipe result.
+    */
+    func getSwipeMessage(success: Bool) -> String {
+        if let isBirthday = entrant.isBirthday, isBirthday {
+            if success {
+                return "Welcome and Happy Birthday!"
+            } else {
+                return "It may be your birthday, but you're still not allowed in this area."
+            }
+        }
+        
+        if success {
+            return "Welcome!"
+        } else {
+            return "Sorry, you're not allowed in here."
+        }
+    }
+    
+    /**
+     Create a SwipeResult.
+     
+     This customizes the SwipeResult message if it's the entrant's birthday.
+     
+     - Parameter success: true if swipe was a success.
+     - Returns: The swipe result.
+    */
+    func createSwipeResult(success: Bool) -> SwipeResult {
+        let message = getSwipeMessage(success: success)
+        return SwipeResult(success: success, message: message)
+    }
 }

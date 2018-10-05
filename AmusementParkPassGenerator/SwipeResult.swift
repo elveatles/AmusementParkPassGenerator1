@@ -26,7 +26,9 @@ struct SwipeResult: CustomStringConvertible {
     init(success: Bool, message: String? = nil) {
         self.success = success
         
-        if message == nil {
+        if let msg = message {
+            self.message = msg
+        } else {
             if success {
                 self.message = "Welcome!"
             } else {
@@ -34,6 +36,4 @@ struct SwipeResult: CustomStringConvertible {
             }
         }
     }
-    
-    
 }

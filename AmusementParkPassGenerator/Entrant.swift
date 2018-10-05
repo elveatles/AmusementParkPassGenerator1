@@ -21,6 +21,17 @@ struct Entrant {
     let state: String?
     let zipCode: Int?
     
+    /// Check if it's the entrant's birthday. nil if the entrant did not provide their date of birth
+    var isBirthday: Bool? {
+        guard let dob = dateOfBirth else {
+            return nil
+        }
+        
+        let todayMonthDay = Calendar.current.dateComponents([.month, .day], from: Date())
+        let dateOfBirthMonthDay = Calendar.current.dateComponents([.month, .day], from: dob)
+        return todayMonthDay == dateOfBirthMonthDay
+    }
+    
     init(
         dateOfBirth: Date? = nil,
         ssn: (Int, Int, Int)? = nil,

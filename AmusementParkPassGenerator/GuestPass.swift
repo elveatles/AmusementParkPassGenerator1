@@ -10,15 +10,15 @@
 class GuestPass: Pass {
     override func swipe(parkArea: ParkArea) -> SwipeResult {
         switch parkArea {
-        case .amusement: return SwipeResult(success: true)
-        default: return SwipeResult(success: false)
+        case .amusement: return createSwipeResult(success: true)
+        default: return createSwipeResult(success: false)
         }
     }
     
     override func swipe(rideAccess: RideAccess) -> SwipeResult {
         switch rideAccess {
-        case .all: return SwipeResult(success: true)
-        default: return SwipeResult(success: false)
+        case .all: return createSwipeResult(success: true)
+        default: return createSwipeResult(success: false)
         }
     }
 }

@@ -19,6 +19,7 @@ struct Test {
         testHourlyEmployeeRideServicesPass()
         testHourlyEmployeeMaintenancePass()
         testManagerPass()
+        testIsBirthday()
     }
     
     /**
@@ -180,6 +181,68 @@ struct Test {
             testPass(pass)
         } catch {
             print("Unexpected error creating ManagerPass: \(error)")
+        }
+    }
+    
+    /// Test if birthday check is working
+    func testIsBirthday() {
+        printTestPass(description: "Test Entrant Birthday")
+        
+        // Test isBirthday without date of birth
+        let anonymousEntrant = Entrant()
+        if anonymousEntrant.isBirthday == nil {
+            print("Expectedly could not check entrant's birthday without a date of birth.")
+        } else {
+            print("Unexpectedly got result from isBirthday even though entrant's date of birth was not provided.")
+        }
+        
+        // Test isBirthday when it is the entrant's birthday
+        let birthdayDateOfBirth = Calendar.current.date(byAdding: .year, value: -1, to: Date())
+        let birthdayEntrant = Entrant(dateOfBirth: birthdayDateOfBirth)
+        if let isBirthday = birthdayEntrant.isBirthday {
+            if isBirthday {
+                print("Expectectly isBirthday is true for birthdayEntrant")
+            } else {
+                print("Unexpectedly isBirthday is false for birthdayEntrant")
+            }
+        } else {
+            print("Unexpectedly guestPass.isBirthday is nil for birthdayEntrant")
+        }
+        
+        // Test swipe message for birthday entrant
+        do {
+            let guestPass = try GuestPass(entrant: birthdayEntrant)
+            var swipeResult = guestPass.swipe(parkArea: .amusement)
+            print("birthday swipeResult for amusement area: \(swipeResult)")
+            swipeResult = guestPass.swipe(parkArea: .office)
+            print("birthday swipeResult for office area: \(swipeResult)")
+        } catch {
+            print("Unexpected error creating GuestPass for birthdayEntrant: \(error)")
+        }
+        
+        // Test isBirthday for non-birthday entrant
+        var nonBirthdayDateOfBirth = Calendar.current.date(byAdding: .year, value: -1, to: Date())
+        nonBirthdayDateOfBirth = Calendar.current.date(byAdding: .day, value: -1, to: Date())
+        let nonBirthdayEntrant = Entrant(dateOfBirth: nonBirthdayDateOfBirth)
+        if let isBirthday = nonBirthdayEntrant.isBirthday {
+            if isBirthday {
+                print("Unexpectedly isBirthday is true for nonBirthdayEntrant")
+            } else {
+                print("Expectectly isBirthday is false for nonBirthdayEntrant")
+            }
+        } else {
+            print("Unexpectedly guestPass.isBirthday is nil for nonBirthdayEntrant")
+        }
+        
+        // Test swipe message for non-birthday entrant
+        do {
+            let guestPass = try GuestPass(entrant: nonBirthdayEntrant)
+            var swipeResult = guestPass.swipe(parkArea: .amusement)
+            print("non-birthday swipeResult for amusement area: \(swipeResult)")
+            swipeResult = guestPass.swipe(parkArea: .office)
+            print("non-birthday swipeResult for office area: \(swipeResult)")
+        } catch {
+            print("Unexpected error creating GuestPass for birthdayEntrant: \(error)")
         }
     }
     

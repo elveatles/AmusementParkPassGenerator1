@@ -10,7 +10,7 @@
 class VIPGuestPass: GuestPass {
     override func swipe(rideAccess: RideAccess) -> SwipeResult {
         switch rideAccess {
-        case .all, .skipLines: return SwipeResult(success: true)
+        case .all, .skipLines: return createSwipeResult(success: true)
         }
     }
     
