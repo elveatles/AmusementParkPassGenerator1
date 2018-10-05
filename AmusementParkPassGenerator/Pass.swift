@@ -13,7 +13,7 @@ import Foundation
  Represents a pass that can be swiped to access different areas of the park,
  rides that can be accessed, and discounts for food or merchandis.
 */
-class Pass {
+class Pass: Swipeable {
     /// The number of seconds an entrant has to wait before they can swipe again
     static let secondsBetweenSwipes = 5
     

@@ -25,6 +25,7 @@
 		0975E6A5216695BA001B7E5A /* ParkArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0975E6A4216695BA001B7E5A /* ParkArea.swift */; };
 		0975E6A721669659001B7E5A /* RideAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0975E6A621669659001B7E5A /* RideAccess.swift */; };
 		0975E6AB2166A6E2001B7E5A /* Entrant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0975E6AA2166A6E2001B7E5A /* Entrant.swift */; };
+		09A8923221682E470051AC30 /* Swipeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A8923121682E470051AC30 /* Swipeable.swift */; };
 		09D718072166BD2B00AD7231 /* DiscountType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D718062166BD2B00AD7231 /* DiscountType.swift */; };
 		09D718092166C1CF00AD7231 /* PassError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D718082166C1CF00AD7231 /* PassError.swift */; };
 		09D7180B2166E69A00AD7231 /* GuestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D7180A2166E69A00AD7231 /* GuestType.swift */; };
@@ -54,6 +55,7 @@
 		0975E6A4216695BA001B7E5A /* ParkArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkArea.swift; sourceTree = "<group>"; };
 		0975E6A621669659001B7E5A /* RideAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideAccess.swift; sourceTree = "<group>"; };
 		0975E6AA2166A6E2001B7E5A /* Entrant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entrant.swift; sourceTree = "<group>"; };
+		09A8923121682E470051AC30 /* Swipeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swipeable.swift; sourceTree = "<group>"; };
 		09D718062166BD2B00AD7231 /* DiscountType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountType.swift; sourceTree = "<group>"; };
 		09D718082166C1CF00AD7231 /* PassError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassError.swift; sourceTree = "<group>"; };
 		09D7180A2166E69A00AD7231 /* GuestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestType.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				0975E69721669137001B7E5A /* LaunchScreen.storyboard */,
 				0975E69A21669137001B7E5A /* Info.plist */,
 				0975E6A0216693E9001B7E5A /* Pass.swift */,
+				09A8923121682E470051AC30 /* Swipeable.swift */,
 				0948EF942167D67F00B84F57 /* ManagerPass.swift */,
 				0948EF922167D65400B84F57 /* HourlyEmployeeRideServicesPass.swift */,
 				0948EF902167D60800B84F57 /* HourlyEmployeeFoodServicesPass.swift */,
@@ -210,6 +213,7 @@
 				0975E6A321669505001B7E5A /* EntrantType.swift in Sources */,
 				0975E68F21669135001B7E5A /* AppDelegate.swift in Sources */,
 				09D7180B2166E69A00AD7231 /* GuestType.swift in Sources */,
+				09A8923221682E470051AC30 /* Swipeable.swift in Sources */,
 				0948EF912167D60800B84F57 /* HourlyEmployeeFoodServicesPass.swift in Sources */,
 				0975E6A5216695BA001B7E5A /* ParkArea.swift in Sources */,
 				0948EF8B2167D48400B84F57 /* VIPGuestPass.swift in Sources */,
