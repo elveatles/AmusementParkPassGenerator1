@@ -7,14 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0948EF892167D42800B84F57 /* GuestPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0948EF882167D42800B84F57 /* GuestPass.swift */; };
+		0948EF8B2167D48400B84F57 /* VIPGuestPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0948EF8A2167D48400B84F57 /* VIPGuestPass.swift */; };
+		0948EF8D2167D4A600B84F57 /* FreeChildGuestPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0948EF8C2167D4A500B84F57 /* FreeChildGuestPass.swift */; };
+		0948EF8F2167D59C00B84F57 /* EmployeePass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0948EF8E2167D59C00B84F57 /* EmployeePass.swift */; };
+		0948EF912167D60800B84F57 /* HourlyEmployeeFoodServicesPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0948EF902167D60800B84F57 /* HourlyEmployeeFoodServicesPass.swift */; };
+		0948EF932167D65400B84F57 /* HourlyEmployeeRideServicesPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0948EF922167D65400B84F57 /* HourlyEmployeeRideServicesPass.swift */; };
+		0948EF952167D67F00B84F57 /* ManagerPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0948EF942167D67F00B84F57 /* ManagerPass.swift */; };
+		0948EF972167D6F300B84F57 /* HourlyEmployeeMaintenancePass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0948EF962167D6F300B84F57 /* HourlyEmployeeMaintenancePass.swift */; };
 		0975E68F21669135001B7E5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0975E68E21669135001B7E5A /* AppDelegate.swift */; };
 		0975E69121669135001B7E5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0975E69021669135001B7E5A /* ViewController.swift */; };
 		0975E69421669135001B7E5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0975E69221669135001B7E5A /* Main.storyboard */; };
 		0975E69621669137001B7E5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0975E69521669137001B7E5A /* Assets.xcassets */; };
 		0975E69921669137001B7E5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0975E69721669137001B7E5A /* LaunchScreen.storyboard */; };
+		0975E6A1216693E9001B7E5A /* Pass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0975E6A0216693E9001B7E5A /* Pass.swift */; };
+		0975E6A321669505001B7E5A /* EntrantType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0975E6A221669505001B7E5A /* EntrantType.swift */; };
+		0975E6A5216695BA001B7E5A /* ParkArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0975E6A4216695BA001B7E5A /* ParkArea.swift */; };
+		0975E6A721669659001B7E5A /* RideAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0975E6A621669659001B7E5A /* RideAccess.swift */; };
+		0975E6AB2166A6E2001B7E5A /* Entrant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0975E6AA2166A6E2001B7E5A /* Entrant.swift */; };
+		09D718072166BD2B00AD7231 /* DiscountType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D718062166BD2B00AD7231 /* DiscountType.swift */; };
+		09D718092166C1CF00AD7231 /* PassError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D718082166C1CF00AD7231 /* PassError.swift */; };
+		09D7180B2166E69A00AD7231 /* GuestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D7180A2166E69A00AD7231 /* GuestType.swift */; };
+		09D7180D2166E6B100AD7231 /* EmployeeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D7180C2166E6B100AD7231 /* EmployeeType.swift */; };
+		09D7180F2166EBAA00AD7231 /* SwipeResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D7180E2166EBAA00AD7231 /* SwipeResult.swift */; };
+		09DD31522166EF2100383814 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DD31512166EF2100383814 /* Test.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0948EF882167D42800B84F57 /* GuestPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestPass.swift; sourceTree = "<group>"; };
+		0948EF8A2167D48400B84F57 /* VIPGuestPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPGuestPass.swift; sourceTree = "<group>"; };
+		0948EF8C2167D4A500B84F57 /* FreeChildGuestPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeChildGuestPass.swift; sourceTree = "<group>"; };
+		0948EF8E2167D59C00B84F57 /* EmployeePass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeePass.swift; sourceTree = "<group>"; };
+		0948EF902167D60800B84F57 /* HourlyEmployeeFoodServicesPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyEmployeeFoodServicesPass.swift; sourceTree = "<group>"; };
+		0948EF922167D65400B84F57 /* HourlyEmployeeRideServicesPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyEmployeeRideServicesPass.swift; sourceTree = "<group>"; };
+		0948EF942167D67F00B84F57 /* ManagerPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerPass.swift; sourceTree = "<group>"; };
+		0948EF962167D6F300B84F57 /* HourlyEmployeeMaintenancePass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyEmployeeMaintenancePass.swift; sourceTree = "<group>"; };
 		0975E68B21669135001B7E5A /* AmusementParkPassGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmusementParkPassGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0975E68E21669135001B7E5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0975E69021669135001B7E5A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +49,17 @@
 		0975E69521669137001B7E5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0975E69821669137001B7E5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0975E69A21669137001B7E5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0975E6A0216693E9001B7E5A /* Pass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pass.swift; sourceTree = "<group>"; };
+		0975E6A221669505001B7E5A /* EntrantType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntrantType.swift; sourceTree = "<group>"; };
+		0975E6A4216695BA001B7E5A /* ParkArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkArea.swift; sourceTree = "<group>"; };
+		0975E6A621669659001B7E5A /* RideAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideAccess.swift; sourceTree = "<group>"; };
+		0975E6AA2166A6E2001B7E5A /* Entrant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entrant.swift; sourceTree = "<group>"; };
+		09D718062166BD2B00AD7231 /* DiscountType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountType.swift; sourceTree = "<group>"; };
+		09D718082166C1CF00AD7231 /* PassError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassError.swift; sourceTree = "<group>"; };
+		09D7180A2166E69A00AD7231 /* GuestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestType.swift; sourceTree = "<group>"; };
+		09D7180C2166E6B100AD7231 /* EmployeeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeType.swift; sourceTree = "<group>"; };
+		09D7180E2166EBAA00AD7231 /* SwipeResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeResult.swift; sourceTree = "<group>"; };
+		09DD31512166EF2100383814 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +94,29 @@
 			children = (
 				0975E68E21669135001B7E5A /* AppDelegate.swift */,
 				0975E69021669135001B7E5A /* ViewController.swift */,
+				09DD31512166EF2100383814 /* Test.swift */,
 				0975E69221669135001B7E5A /* Main.storyboard */,
 				0975E69521669137001B7E5A /* Assets.xcassets */,
 				0975E69721669137001B7E5A /* LaunchScreen.storyboard */,
 				0975E69A21669137001B7E5A /* Info.plist */,
+				0975E6A0216693E9001B7E5A /* Pass.swift */,
+				0948EF942167D67F00B84F57 /* ManagerPass.swift */,
+				0948EF922167D65400B84F57 /* HourlyEmployeeRideServicesPass.swift */,
+				0948EF902167D60800B84F57 /* HourlyEmployeeFoodServicesPass.swift */,
+				0948EF962167D6F300B84F57 /* HourlyEmployeeMaintenancePass.swift */,
+				0948EF8E2167D59C00B84F57 /* EmployeePass.swift */,
+				0948EF8C2167D4A500B84F57 /* FreeChildGuestPass.swift */,
+				0948EF8A2167D48400B84F57 /* VIPGuestPass.swift */,
+				0948EF882167D42800B84F57 /* GuestPass.swift */,
+				09D7180E2166EBAA00AD7231 /* SwipeResult.swift */,
+				09D718082166C1CF00AD7231 /* PassError.swift */,
+				09D718062166BD2B00AD7231 /* DiscountType.swift */,
+				0975E6AA2166A6E2001B7E5A /* Entrant.swift */,
+				0975E6A221669505001B7E5A /* EntrantType.swift */,
+				09D7180C2166E6B100AD7231 /* EmployeeType.swift */,
+				09D7180A2166E69A00AD7231 /* GuestType.swift */,
+				0975E6A4216695BA001B7E5A /* ParkArea.swift */,
+				0975E6A621669659001B7E5A /* RideAccess.swift */,
 			);
 			path = AmusementParkPassGenerator;
 			sourceTree = "<group>";
@@ -135,8 +192,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09D718072166BD2B00AD7231 /* DiscountType.swift in Sources */,
 				0975E69121669135001B7E5A /* ViewController.swift in Sources */,
+				0948EF932167D65400B84F57 /* HourlyEmployeeRideServicesPass.swift in Sources */,
+				0975E6A721669659001B7E5A /* RideAccess.swift in Sources */,
+				0975E6A1216693E9001B7E5A /* Pass.swift in Sources */,
+				09D718092166C1CF00AD7231 /* PassError.swift in Sources */,
+				0948EF952167D67F00B84F57 /* ManagerPass.swift in Sources */,
+				0948EF892167D42800B84F57 /* GuestPass.swift in Sources */,
+				09D7180D2166E6B100AD7231 /* EmployeeType.swift in Sources */,
+				09DD31522166EF2100383814 /* Test.swift in Sources */,
+				0948EF8D2167D4A600B84F57 /* FreeChildGuestPass.swift in Sources */,
+				0948EF8F2167D59C00B84F57 /* EmployeePass.swift in Sources */,
+				0975E6AB2166A6E2001B7E5A /* Entrant.swift in Sources */,
+				09D7180F2166EBAA00AD7231 /* SwipeResult.swift in Sources */,
+				0948EF972167D6F300B84F57 /* HourlyEmployeeMaintenancePass.swift in Sources */,
+				0975E6A321669505001B7E5A /* EntrantType.swift in Sources */,
 				0975E68F21669135001B7E5A /* AppDelegate.swift in Sources */,
+				09D7180B2166E69A00AD7231 /* GuestType.swift in Sources */,
+				0948EF912167D60800B84F57 /* HourlyEmployeeFoodServicesPass.swift in Sources */,
+				0975E6A5216695BA001B7E5A /* ParkArea.swift in Sources */,
+				0948EF8B2167D48400B84F57 /* VIPGuestPass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
