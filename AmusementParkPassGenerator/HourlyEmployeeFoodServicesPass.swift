@@ -10,8 +10,8 @@
 class HourlyEmployeeFoodServicesPass: EmployeePass {
     override func swipe(parkArea: ParkArea) -> SwipeResult {
         switch parkArea {
-        case .amusement, .kitchen: return createSwipeResult(success: true)
-        default: return createSwipeResult(success: false)
+        case .amusement, .kitchen: return createSwipeResult(accessible: true)
+        default: return createSwipeResult(accessible: false)
         }
     }
 }

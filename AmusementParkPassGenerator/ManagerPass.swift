@@ -11,7 +11,7 @@ class ManagerPass: EmployeePass {
     override func swipe(parkArea: ParkArea) -> SwipeResult {
         switch parkArea {
         case .amusement, .kitchen, .rideControl, .maintenance, .office:
-            return createSwipeResult(success: true)
+            return createSwipeResult(accessible: true)
         }
     }
     

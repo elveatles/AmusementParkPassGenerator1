@@ -14,8 +14,23 @@ import Foundation
  rides that can be accessed, and discounts for food or merchandis.
 */
 class Pass {
+    /// The number of seconds an entrant has to wait before they can swipe again
+    static let secondsBetweenSwipes = 5
+    
     /// The entrant this card was assigned to
     let entrant: Entrant
+    /// The last time the entrant swiped
+    var lastSwipeTime: Date?
+    
+    /// Check if a swipe is too soon since the last swipe
+    var isSwipeTooSoon: Bool {
+        guard let lastTime = lastSwipeTime else {
+            return false
+        }
+        
+        let swipeSeconds = Int(Date().timeIntervalSince(lastTime))
+        return swipeSeconds < Pass.secondsBetweenSwipes
+    }
     
     /**
      Create a pass that stores entrant information.
@@ -84,11 +99,21 @@ class Pass {
      
      This customizes the SwipeResult message if it's the entrant's birthday.
      
-     - Parameter success: true if swipe was a success.
+     - Parameter accessible: true if swipe happened in an accessible area.
+     - Parameter checkSwipeTime: If true, the last swipe time will be checked to make sure the entrant hasn't swiped again too soon. Also updates the last swipe time.
      - Returns: The swipe result.
     */
-    func createSwipeResult(success: Bool) -> SwipeResult {
-        let message = getSwipeMessage(success: success)
-        return SwipeResult(success: success, message: message)
+    func createSwipeResult(accessible: Bool, checkSwipeTime: Bool = false) -> SwipeResult {
+        if checkSwipeTime {
+            if isSwipeTooSoon {
+                lastSwipeTime = Date()
+                return SwipeResult(success: false, message: "You swiped too soon since your last swipe. You'll have to wait some time.")
+            }
+            
+            lastSwipeTime = Date()
+        }
+        
+        let message = getSwipeMessage(success: accessible)
+        return SwipeResult(success: accessible, message: message)
     }
 }

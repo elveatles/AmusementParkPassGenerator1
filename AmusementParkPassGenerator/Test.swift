@@ -20,6 +20,7 @@ struct Test {
         testHourlyEmployeeMaintenancePass()
         testManagerPass()
         testIsBirthday()
+        testSwipeTooSoon()
     }
     
     /**
@@ -201,7 +202,7 @@ struct Test {
         let birthdayEntrant = Entrant(dateOfBirth: birthdayDateOfBirth)
         if let isBirthday = birthdayEntrant.isBirthday {
             if isBirthday {
-                print("Expectectly isBirthday is true for birthdayEntrant")
+                print("Expectedly isBirthday is true for birthdayEntrant")
             } else {
                 print("Unexpectedly isBirthday is false for birthdayEntrant")
             }
@@ -228,7 +229,7 @@ struct Test {
             if isBirthday {
                 print("Unexpectedly isBirthday is true for nonBirthdayEntrant")
             } else {
-                print("Expectectly isBirthday is false for nonBirthdayEntrant")
+                print("Expectedly isBirthday is false for nonBirthdayEntrant")
             }
         } else {
             print("Unexpectedly guestPass.isBirthday is nil for nonBirthdayEntrant")
@@ -243,6 +244,26 @@ struct Test {
             print("non-birthday swipeResult for office area: \(swipeResult)")
         } catch {
             print("Unexpected error creating GuestPass for birthdayEntrant: \(error)")
+        }
+    }
+    
+    /// Test multiple swipes that happen to soon
+    func testSwipeTooSoon() {
+        printTestPass(description: "Swipe Too Soon")
+        
+        let entrant = Entrant()
+        do {
+            let pass = try GuestPass(entrant: entrant)
+            let _ = pass.swipe(rideAccess: .all)
+            var swipeResult = pass.swipe(rideAccess: .all)
+            print("Swipe too soon result: \(swipeResult)")
+            
+            let seconds = -TimeInterval(Pass.secondsBetweenSwipes) - 1.0
+            pass.lastSwipeTime = Date(timeIntervalSinceNow: seconds)
+            swipeResult = pass.swipe(rideAccess: .all)
+            print("Swipe result right after time limit: \(swipeResult)")
+        } catch {
+            print("Unexpected error creating GuestPass in testSwipeTooSoon")
         }
     }
     
@@ -269,6 +290,7 @@ struct Test {
         print("----------------------------------------------")
         var rideAccessResult = pass.swipe(rideAccess: .all)
         print("All Rides: \(rideAccessResult)")
+        pass.lastSwipeTime = nil // Ignore the last swipe time rule for testing
         rideAccessResult = pass.swipe(rideAccess: .skipLines)
         print("Skip lines: \(rideAccessResult)")
         

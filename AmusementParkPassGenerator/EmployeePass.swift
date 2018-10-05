@@ -53,8 +53,8 @@ class EmployeePass: Pass {
     
     override func swipe(rideAccess: RideAccess) -> SwipeResult {
         switch rideAccess {
-        case .all: return createSwipeResult(success: true)
-        default: return createSwipeResult(success: false)
+        case .all: return createSwipeResult(accessible: true, checkSwipeTime: true)
+        default: return createSwipeResult(accessible: false, checkSwipeTime: true)
         }
     }
     
